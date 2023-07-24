@@ -14,8 +14,6 @@ def send_ping_request(host: str, port_no: int) -> None:
 
 
 if __name__ == "__main__":
-    # server_host = socket.gethostname()
-    # server_port = 80
 
     parser = argparse.ArgumentParser(description="Ping Server")
     parser.add_argument('--hostname', type=str,

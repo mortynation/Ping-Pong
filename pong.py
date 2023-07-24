@@ -1,4 +1,4 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 import socket
 import argparse
 import logging
@@ -9,7 +9,7 @@ logging.basicConfig(filename='server.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-class MyRequestHandler(BaseHTTPRequestHandler):
+class MyRequestHandler(SimpleHTTPRequestHandler):
     def do_GET(self) -> None:
         if self.path == '/ping':
             self.send_response(200)
