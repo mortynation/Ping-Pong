@@ -14,10 +14,13 @@ def send_ping_request(host: str, port_no: int) -> None:
 
 
 if __name__ == "__main__":
+    hostname = socket.gethostname()
 
     parser = argparse.ArgumentParser(description="Ping Server")
     parser.add_argument('--hostname', type=str,
-                        default=socket.gethostname(), help='Hostname')
+                        default=hostname, help='Hostname')
+    parser.add_argument(
+        '--ip', type=str, default=socket.gethostbyname(hostname), help='IP')
     parser.add_argument(
         '--port', type=int, default=80, help='Port Number')
     args = parser.parse_args()

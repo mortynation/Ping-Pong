@@ -16,7 +16,7 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            response = f"pong {socket.gethostname()} {self.server.server_address[0]}"
+            response = f"pong from {socket.gethostname()} {self.server.server_address[0]}"
             self.wfile.write(response.encode())
             logging.info(
                 f"GET request received: {self.path}, Response: {response}")
