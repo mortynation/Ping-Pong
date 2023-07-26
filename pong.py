@@ -3,6 +3,7 @@ import socket
 import argparse
 import logging
 from typing import Any
+import webbrowser
 
 
 logging.basicConfig(filename='server.log', level=logging.INFO,
@@ -21,19 +22,22 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
                 f"GET request received: {self.path}, Response: {response}")
 
         else:
-            self.send_response(404)
-            self.end_headers()
-            logging.warning(f"Invalid request: {self.path}")
+            return super().do_GET()
 
     def log_message(self, format: str, *args: Any) -> None:
         pass
 
 
 def run_server_http(port_no: int) -> None:
-    server_address = (socket.gethostname(), port_no)
+    host_name = socket.gethostname()
+    with open('index.html', 'w') as file:
+        file.write(f'{socket.gethostbyname(host_name)}, {port_no}')
+    server_address = (host_name, port_no)
     httpd = HTTPServer(server_address, MyRequestHandler)
     print("Server started at port", port_no)
     logging.info(f"Server started at port {port_no}")
+    url = f'http://{socket.gethostbyname(host_name)}:{port_no}'
+    webbrowser.open(url)
     httpd.serve_forever()
 
 
