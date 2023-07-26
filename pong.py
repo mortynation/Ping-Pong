@@ -31,13 +31,13 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
 def run_server_http(port_no: int) -> None:
     host_name = socket.gethostname()
     with open('index.html', 'w') as file:
-        file.write(f'{socket.gethostbyname(host_name)}, {port_no}')
+        file.write(f'{host_name}, {socket.gethostbyname(host_name)}')
     server_address = (host_name, port_no)
     httpd = HTTPServer(server_address, MyRequestHandler)
     print("Server started at port", port_no)
     logging.info(f"Server started at port {port_no}")
-    url = f'http://{socket.gethostbyname(host_name)}:{port_no}'
-    webbrowser.open(url)
+    print(
+        f'Open this link - http://{socket.gethostbyname(host_name)}:{port_no}')
     httpd.serve_forever()
 
 
