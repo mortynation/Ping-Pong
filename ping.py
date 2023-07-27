@@ -4,8 +4,8 @@ import socket
 import argparse
 
 
-def send_ping_request(host: str, port_no: int) -> None:
-    conn = http.client.HTTPConnection(host, port_no)
+def send_ping_request(host_ip: str, port_no: int) -> None:
+    conn = http.client.HTTPConnection(host_ip, port_no)
     conn.request("GET", "/ping")
     response = conn.getresponse()
     data = response.read().decode()
@@ -14,22 +14,27 @@ def send_ping_request(host: str, port_no: int) -> None:
 
 
 if __name__ == "__main__":
-    hostname = socket.gethostname()
+    localhost_name = socket.gethostname()
 
     parser = argparse.ArgumentParser(description="Ping Server")
-    parser.add_argument('--hostname', type=str,
-                        default=hostname, help='Hostname')
+    parser.add_argument('--hostname', type=str, help='Hostname')
     parser.add_argument(
-        '--ip', type=str, default=socket.gethostbyname(hostname), help='IP')
+        '--ip', type=str, help='IP')
     parser.add_argument(
         '--port', type=int, default=80, help='Port Number')
     args = parser.parse_args()
     hostname = args.hostname
     port = args.port
+    ip = args.ip
 
     while True:
         try:
-            send_ping_request(hostname, port)
+            if not hostname and ip:
+                send_ping_request(ip, port)
+            elif not ip and hostname:
+                send_ping_request(hostname, port)
+            elif not ip and not hostname:
+                send_ping_request(localhost_name, port)
             time.sleep(1)
         except KeyboardInterrupt:
             print("Ping client stopped.")
