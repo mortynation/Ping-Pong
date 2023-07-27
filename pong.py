@@ -3,7 +3,6 @@ import socket
 import argparse
 import logging
 from typing import Any
-import webbrowser
 
 
 logging.basicConfig(filename='server.log', level=logging.INFO,
