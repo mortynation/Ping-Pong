@@ -3,6 +3,8 @@ import time
 import socket
 import argparse
 
+# time: 8.42 pm
+
 
 def send_ping_request(host_ip: str, port_no: int) -> None:
     conn = http.client.HTTPConnection(host_ip, port_no)
