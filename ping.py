@@ -4,6 +4,7 @@ import socket
 import argparse
 
 # time: 8.42 pm
+# time: 8.57 pm
 
 
 def send_ping_request(host_ip: str, port_no: int) -> None:
