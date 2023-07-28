@@ -359,3 +359,46 @@
 2023-07-26 23:28:05,656 - INFO - GET request received: /ping, Response: pong from Mortys-Air 192.168.1.162
 2023-07-26 23:28:06,667 - INFO - GET request received: /ping, Response: pong from Mortys-Air 192.168.1.162
 2023-07-26 23:28:07,675 - INFO - GET request received: /ping, Response: pong from Mortys-Air 192.168.1.162
+2023-07-27 19:34:26,911 - INFO - Server started at port 80
+2023-07-27 19:34:47,703 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:48,714 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:49,724 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:50,734 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:51,740 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:52,750 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:53,760 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:34:54,770 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 192.168.1.243
+2023-07-27 19:35:02,810 - INFO - Server started at port 80
+2023-07-27 19:35:02,833 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 127.0.0.1
+2023-07-27 19:35:03,842 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 127.0.0.1
+2023-07-27 19:35:04,851 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 127.0.0.1
+2023-07-27 19:35:05,861 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 127.0.0.1
+2023-07-27 19:35:06,870 - INFO - GET request received: /ping, Response: pong from Mortys-Air.local 127.0.0.1
+2023-07-28 12:12:41,044 - INFO - Server started at port 80
+2023-07-28 12:13:38,637 - INFO - Server started at port 80
+2023-07-28 12:13:58,061 - INFO - Server started at port 80
+2023-07-28 12:14:25,091 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:14:26,101 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:14:27,108 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:14:28,115 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:16:42,261 - INFO - Server started at port 80
+2023-07-28 12:17:13,664 - INFO - Server started at port 80
+2023-07-28 12:19:38,992 - INFO - Server started at port 80
+2023-07-28 12:19:44,242 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:45,251 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:46,258 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:49,433 - INFO - Server started at port 80
+2023-07-28 12:19:50,287 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:51,296 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:52,302 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:54,255 - INFO - Server started at port 80
+2023-07-28 12:19:54,315 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:55,323 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:56,328 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:19:57,333 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:20:39,174 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:20:40,181 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:20:41,187 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:21:06,763 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:21:07,773 - INFO - GET request received: /ping, Response: pong from Mortys-Air.localdomain 192.168.1.64
+2023-07-28 12:21:48,302 - INFO - Server started at port 80

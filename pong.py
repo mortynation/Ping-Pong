@@ -28,9 +28,37 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
 
 
 def run_server_http(port_no: int) -> None:
+
     host_name = socket.gethostname()
+    html_code = f'''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Host Information</title>
+        <style>
+            body {{
+                display: flex;
+                justify-content: center;
+                align-items: top;
+                height: 100vh;
+                margin: 0;
+            }}
+            .container {{
+                text-align: center;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Host Information</h1>
+            <p><b>Hostname:</b> {host_name}</p>
+            <p><b>IP:</b> {socket.gethostbyname(host_name)}</p>
+        </div>
+    </body>
+    </html>
+    '''
     with open('index.html', 'w') as file:
-        file.write(f'{host_name}, {socket.gethostbyname(host_name)}')
+        file.write(html_code)
     server_address = (host_name, port_no)
     httpd = HTTPServer(server_address, MyRequestHandler)
     print("Server started at port", port_no)
