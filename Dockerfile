@@ -10,3 +10,6 @@ WORKDIR $WORKSPACE/pong-srv
 
 COPY pong.py $WORKSPACE/pong-srv
 
+CMD ["python3", "$WORKSPACE/pong-srv/pong.py"]
+
+
