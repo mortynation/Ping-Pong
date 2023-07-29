@@ -1,6 +1,8 @@
 FROM amazonlinux:latest
 
-WORKDIR /the/workdir/path
+RUN mkdir -p $WORKSPACE/pong-srv
 
-COPY pong.py /the/workdir/path
+WORKDIR $WORKSPACE/pong-srv
+
+COPY pong.py $WORKSPACE/pong-srv
 
