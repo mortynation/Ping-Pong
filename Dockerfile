@@ -4,12 +4,12 @@ LABEL maintainer="Nivaas"
 LABEL description="Pong Service Image"
 LABEL version="1.0"
 
-RUN mkdir -p $WORKSPACE/pong-srv
+RUN mkdir -p /opt/pong-srv
 
-WORKDIR $WORKSPACE/pong-srv
+WORKDIR /opt/pong-srv
 
-COPY pong.py $WORKSPACE/pong-srv
+COPY pong.py /opt/pong-srv/
 
-CMD ["python3", "$WORKSPACE/pong-srv/pong.py"]
+CMD ["python3", "opt/pong-srv/pong.py"]
 
 
