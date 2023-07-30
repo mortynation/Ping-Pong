@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import socket
 import argparse
