@@ -6,10 +6,10 @@ LABEL version="1.0"
 
 RUN mkdir -p /opt/pong-srv
 
-WORKDIR /opt/pong-srv
+WORKDIR /opt/pong-srv/
 
 COPY pong.py /opt/pong-srv/
 
-CMD ["python3", "opt/pong-srv/pong.py"]
+CMD ["python3", "pong.py"]
 
 
