@@ -6,6 +6,6 @@ WORKDIR /opt/pong-srv/
 
 COPY pong.py /opt/pong-srv/
 
-CMD ["python", "pong.py"]
+CMD ["python3", "pong.py"]
 
 
