@@ -6,6 +6,8 @@ COPY pong.py /opt/pong-srv/
 
 RUN ls -lrth /opt/pong-srv/ 
 
-CMD ["sh", "-c", "python3 /opt/pong-srv/pong.py"]
+#CMD ["sh", "-c", "python3 /opt/pong-srv/pong.py"]
+
+RUN python3 /opt/pong-srv/pong.py
 
 
