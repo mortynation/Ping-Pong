@@ -27,12 +27,14 @@ if __name__ == "__main__":
         '--ip', type=str, help='IP')
     parser.add_argument(
         '--port', type=int, default=80, help='Port Number')
+    parser.add_argument('--count', type=int, default=10, help='Count')
     args = parser.parse_args()
     hostname = args.hostname
     port = args.port
     ip = args.ip
+    count = args.count
 
-    while True:
+    while count:
         try:
             if not hostname and ip:
                 send_ping_request(ip, port)
@@ -41,9 +43,11 @@ if __name__ == "__main__":
             elif not ip and not hostname:
                 send_ping_request(localhost_name, port)
             time.sleep(1)
+            count -= 1
         except KeyboardInterrupt:
             print("Ping client stopped.")
             break
         except Exception as e:
             print("Pong: Failed")
             time.sleep(1)
+            count -= 1
