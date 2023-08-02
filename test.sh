@@ -2,6 +2,7 @@
 
 echo "Build host: $HOSTNAME"
 echo "Build running on ${NODE_NAME}"
+echo "$WORKSPACE"
 
 CONTAINER_ID=$(docker ps --filter "name=pong_serv_cont" | awk '{print $1}' |grep -v CONTAINER)
 echo $CONTAINER_ID
