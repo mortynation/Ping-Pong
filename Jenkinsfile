@@ -17,7 +17,7 @@ pipeline {
                 echo 'testing the application...'
                 dir('/Users/mortimer/slave/workspace/my-app-pipeline_main') {
                     sh 'chmod +x ping.py'
-                    sh 'python3 ping.py --hostname localhost --port 8090'
+                    sh 'python3 ping.py --hostname localhost --port 8090 --count 4'
                 }
             }
         }
