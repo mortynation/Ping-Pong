@@ -4,8 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the application...'
+                echo $WORKSPACE
                 $WORKSPACE/test.sh
-
             }
         }
         stage('Test') {
