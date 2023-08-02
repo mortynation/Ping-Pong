@@ -5,10 +5,9 @@ pipeline {
             steps {
                 echo 'building the application...'
                 script {
-                    // Change to the desired directory where test.sh is located
                     dir('/Users/mortimer/slave/workspace/my-app-pipeline_main') {
-                        sh 'chmod +x build.sh' // Optional: Ensure test.sh has executable permissions
-                        sh './build.sh' // Execute the test.sh script
+                        sh 'chmod +x build.sh'
+                        sh './build.sh' 
                     }
                 }
             }
@@ -16,6 +15,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'testing the application...'
+                dir('/Users/mortimer/slave/workspace/my-app-pipeline_main') {
+                    sh 'chmod +x ping.py'
+                    sh 'python3 ping.py'
+                }
             }
         }
         stage('Deploy') {
