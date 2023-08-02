@@ -5,7 +5,9 @@ pipeline {
             steps {
                 echo 'building the application...'
                 echo $WORKSPACE
-                $WORKSPACE/test.sh
+                script{
+                    $WORKSPACE/test.sh
+                } 
             }
         }
         stage('Test') {
