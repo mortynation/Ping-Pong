@@ -4,6 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the application...'
+                $WORKSPACE/test.sh
+
             }
         }
         stage('Test') {
