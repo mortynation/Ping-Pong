@@ -2,4 +2,4 @@ FROM pong-server-image:latest
 
 WORKDIR /opt/pong-srv
 
-CMD ["python3", "./pong.py --port 8080"]
+CMD ["python3", "./pong.py"]
