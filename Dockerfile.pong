@@ -1,0 +1,5 @@
+FROM pong-server-image:latest
+
+WORKDIR /opt/pong-srv
+
+CMD ["python3", "./pong.py"]
