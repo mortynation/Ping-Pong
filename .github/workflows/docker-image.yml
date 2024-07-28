@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v4
+    - name: Packer init
+      run: packer init .
+    - name: Packer format
+      run: packer fmt .
+    - name: Packer validate
+      run: packer validate .
+    - name: Packer build
+      run: packer build docker-image.pkr.hcl
+    - name: Docker build
+      run: docker build -t python-pong -f Dockerfile.pong .
+    - name: Launch container
+      run: docker run -it --name pong-container -p 80:80 python-pong
+
+    
