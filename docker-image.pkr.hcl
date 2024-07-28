@@ -49,7 +49,6 @@ build {
       "apt-get install -y python3",
       "chmod 700 /opt/pong-srv/pong.py",
       "ls -lrth /opt/pong-srv/",
-    #   "python3 /opt/pong-srv/pong.py"
     ]
   }
 
